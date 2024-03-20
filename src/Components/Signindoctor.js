@@ -2,6 +2,7 @@ import docsign from '../Images/docsign.png';
 import Logopos from './Logopos';
 import blob from '../Images/blob.png';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Signindoctor = () => {
   const [employeeID, setEmployeeID] = useState('');
@@ -35,6 +36,12 @@ const Signindoctor = () => {
     }
   };
 
+  const navigate = useNavigate();
+  const usenav = ()=>{
+    let path = `/choosedoctor`;
+    navigate(path);
+  }
+
   return ( 
     <div className="Signindoctor  w-full h-screen " 
     style={{backgroundImage: `url(${blob})`,
@@ -42,19 +49,19 @@ const Signindoctor = () => {
     backgroundPosition: 'center'
     }}>
         <Logopos/>
-        <div class="another flex justify-center items-center">
-          <div class="docdetails flex justify-between rounded-3xl bg-greeno bg-opacity-70 size-[80%] mt-5">
-            <div class="details p-14 pl-16">
+        <div className="another flex justify-center items-center">
+          <div className="docdetails flex justify-between rounded-3xl bg-greeno bg-opacity-70 size-[80%] mt-5">
+            <div className="details p-14 pl-16">
               <form action="">
-                <h3 class="text-black text-6xl ">Login</h3>
+                <h3 className="text-black text-6xl ">Login</h3>
                 <div className='py-16'>
                   <div>
-                    <input type="text" placeholder="Employee ID" class="bg-inherit text- text-black text-xl focus:outline-0 placeholder-gray-700" />
+                    <input type="text" placeholder="Employee ID" className="bg-inherit text- text-black text-xl focus:outline-0 placeholder-gray-700" />
                     <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700 w-[80%]"/>
                   </div>
                   <br />
                   <div>
-                    <input type="password" placeholder="Password" class="bg-inherit focus:outline-0 text-black text-xl placeholder-gray-700" />
+                    <input type="password" placeholder="Password" className="bg-inherit focus:outline-0 text-black text-xl placeholder-gray-700" />
                     <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700 w-[80%]"/>
                   </div>
                 </div>
@@ -62,15 +69,13 @@ const Signindoctor = () => {
                   <p className="text-sm text-gray-600 mr-12">Forgot password? <a href="/choose" className='underline'>Click Here</a></p>
                   <p className="text-sm text-gray-600">Don't have an account? <a href="/cadoc" className='underline'>Sign Up</a></p>
                 </div>
-                <div className="done ml-[40%] mt-[10%]"><button className='bg-[#d2eabd] p-3 px-8 text-[#3a6c1e] rounded-2xl text-lg'>Log In</button></div>
+                <div className="done ml-[40%] mt-[10%]"><button className='bg-[#d2eabd] p-3 px-8 text-[#3a6c1e] rounded-2xl text-lg' onClick={usenav}>Log In</button></div>
               </form>
             </div>
-            <div class="sideimg"><img src={docsign} alt="img" className='rounded-r-xl h-[100%] '/></div>
+            <div className="sideimg"><img src={docsign} alt="img" className='rounded-r-xl h-[100%] '/></div>
           </div>
-          <div className="sideimg"><img src={docsign} alt="img" className='size-fit rounded-r-xl ' /></div>
         </div>
       </div>
-    </div>
   );
 }
 

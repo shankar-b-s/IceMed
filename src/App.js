@@ -7,10 +7,12 @@ import Signinpatient from './Components/Signinpatient';
 import Createaccdoctor from './Components/Createaccdoctor';
 import Chatbot from './Components/Chatbot';
 import Createaccpatient from './Components/Createaccpatient';
+import Choosedoctor from './Components/Choosedoctor';
 function App() {
   return (
     <Routes>
       <Route path='/choose'element={<Choose/>}/>
+      <Route path='/choosedoctor'element={<Choosedoctor/>}/>
       <Route path='/signindoctor' element={<Signindoctor/>}/>
       <Route path='/' element={<Landing/>}/>
       <Route path='/signinpatient' element={<Signinpatient/>}/>
