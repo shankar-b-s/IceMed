@@ -1,7 +1,40 @@
 import docsign from '../Images/docsign.png';
 import Logopos from './Logopos';
 import blob from '../Images/blob.png';
+import { useState } from 'react';
+
 const Signindoctor = () => {
+  const [employeeID, setEmployeeID] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginStatus, setLoginStatus] = useState(null); // To track login status
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:4000/doctorlogin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ employeeID, password })
+      });
+
+      const data = await response.json();
+      if(response.status === 200){
+        setLoginStatus('success');
+        // Redirect or perform any action upon successful login
+        window.location.href = '/';
+      }
+      else{
+        setLoginStatus('failure');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setLoginStatus('failure');
+    }
+  };
+
   return ( 
     <div className="Signindoctor  w-full h-screen " 
     style={{backgroundImage: `url(${blob})`,
@@ -34,10 +67,11 @@ const Signindoctor = () => {
             </div>
             <div class="sideimg"><img src={docsign} alt="img" className='rounded-r-xl h-[100%] '/></div>
           </div>
+          <div className="sideimg"><img src={docsign} alt="img" className='size-fit rounded-r-xl ' /></div>
         </div>
-      </div> 
-
-   );
+      </div>
+    </div>
+  );
 }
- 
+
 export default Signindoctor;
