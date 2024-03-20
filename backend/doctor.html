@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login and Register</title>
+</head>
+<body>
+    <h1>Doctor Login</h1>
+    <form id="doctorLoginForm">
+        <label for="doctorEmployeeID">Employee ID:</label>
+        <input type="text" id="doctorEmployeeID" name="employeeID" required><br><br>
+        <label for="doctorPassword">Password:</label>
+        <input type="password" id="doctorPassword" name="password" required><br><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <h1>Doctor Register</h1>
+    <form id="doctorRegisterForm">
+        <label for="doctorRegEmployeeID">Employee ID:</label>
+        <input type="text" id="doctorRegEmployeeID" name="employeeID" required><br><br>
+        <label for="doctorRegPassword">Password:</label>
+        <input type="password" id="doctorRegPassword" name="password" required><br><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        document.getElementById('doctorLoginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const employeeID = document.getElementById('doctorEmployeeID').value;
+            const password = document.getElementById('doctorPassword').value;
+
+            try {
+                const response = await fetch('http://localhost:4000/doctorlogin', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ employeeID, password })
+                });
+
+                const data = await response.json();
+                console.log(data); // Print the JSON Web Token to the console
+                alert('Doctor logged in successfully!');
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Doctor login failed. Please try again.');
+            }
+        });
+
+        document.getElementById('doctorRegisterForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const employeeID = document.getElementById('doctorRegEmployeeID').value;
+            const password = document.getElementById('doctorRegPassword').value;
+
+            try {
+                const response = await fetch('http://localhost:4000/doctorregister', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ employeeID, password })
+                });
+
+                const data = await response.json();
+                console.log(data);
+                alert('Doctor registered successfully!');
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Doctor registration failed. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
