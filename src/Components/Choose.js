@@ -13,14 +13,18 @@ const Choose = () => {
       <div className="docnpat flex flex-col">
         <Logopos/>
         <div className="division flex justify-center align-middle">
-          <div className="doctor flex flex-col justify-center align-middle bg-white text-black p-48  rounded-l-xl cursor-pointer">
-            <div className="docimg"><FaUserDoctor size={100}/></div>
-            <div className="text-3xl items-center pt-3">Doctor</div>
-          </div>
-          <div className="patient bg-greeno flex flex-col justify-center align-middle p-48  rounded-r-xl cursor-pointer">
-            <div className="docimg"><FaUser size={85}/></div>
-            <div className="text-3xl items-center pt-3">Patient</div>
-          </div>
+          <a href="/signindoctor">
+            <div className="doctor flex flex-col justify-center align-middle bg-white text-black p-48  rounded-l-xl cursor-pointer">
+              <div className="docimg"><FaUserDoctor size={100}/></div>
+              <div className="text-3xl items-center pt-3">Doctor</div>
+            </div>
+          </a>
+          <a href="/signinpatient">
+            <div className="patient bg-greeno flex flex-col justify-center align-middle p-48  rounded-r-xl cursor-pointer">
+              <div className="docimg"><FaUser size={100}/></div>
+              <div className="text-3xl items-center pt-3">Patient</div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
