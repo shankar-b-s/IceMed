@@ -26,10 +26,10 @@ mongoose.connect(mongoUrl, {
 
 // Register Route
 app.post('/register', async (req,res) => {
-    const {username,password} = req.body;
+    const {patientID,password} = req.body;
     try{
       const userDoc = await User.create({
-        username,
+        patientID,
         password: bcrypt.hashSync(password, salt),
       });
       res.json(userDoc);
@@ -41,19 +41,19 @@ app.post('/register', async (req,res) => {
 
 // Login route
 app.post('/login', async (req,res) => {
-    const {username,password} = req.body;
-    const userDoc = await User.findOne({username});
+    const {patientID,password} = req.body;
+    const userDoc = await User.findOne({patientID});
     if (!userDoc) {
         return res.status(400).json('User not found');
     }
     const passOk = bcrypt.compareSync(password, userDoc.password);
     if (passOk) {
       // logged in
-      jwt.sign({username, id: userDoc._id}, secret, {}, (err, token) => {
+      jwt.sign({patientID, id: userDoc._id}, secret, {}, (err, token) => {
         if (err) throw err;
         res.cookie('token', token).json({
           id: userDoc._id,
-          username,
+          patientID,
         });
       });
     } else {
@@ -113,7 +113,7 @@ function verifyToken(req, res, next) {
         if (err) {
             return res.status(401).json({ message: 'Unauthorized: Invalid token' });
         }
-        req.username = decoded.username;
+        req.patientID = decoded.patientID;
         req.userId = decoded.id;
         next();
     });
@@ -122,7 +122,7 @@ function verifyToken(req, res, next) {
 // Protected route example
 app.get('/profile', verifyToken, (req,res) => {
     // This route is protected, only accessible with a valid token
-    res.json({ username: req.username, userId: req.userId });
+    res.json({ patientID: req.patientID, userId: req.userId });
 });
 
 // Logout route

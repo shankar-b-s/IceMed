@@ -6,6 +6,7 @@ import Landing from './Components/Landing';
 import Signinpatient from './Components/Signinpatient';
 import Createaccdoctor from './Components/Createaccdoctor';
 import Chatbot from './Components/Chatbot';
+import ChatWithPDF from './Components/chatwithpdf';
 function App() {
   return (
     <Routes>
@@ -15,6 +16,7 @@ function App() {
       <Route path='/signinpatient' element={<Signinpatient/>}/>
       <Route path='/cadoc' element={<Createaccdoctor/>}/>
       <Route path='/chatbot' element={<Chatbot/>}/>
+      <Route path='/chatwithpdf' element={<ChatWithPDF/>}/>
     </Routes>
   );
 }
