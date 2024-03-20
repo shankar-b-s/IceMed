@@ -27,7 +27,7 @@ const Signinpatient = () => {
                 </div>
                 <div className='flex -mt-10'>
                   <p className="text-sm text-gray-600 mr-20 whitespace-nowrap">Forgot password? <a href="/choose" className='underline'>Click Here</a></p>
-                  <p className="text-sm text-gray-600 whitespace-nowrap">Don't have an account? <a href="/choose" className='underline'>Sign Up</a></p>
+                  <p className="text-sm text-gray-600 whitespace-nowrap">Don't have an account? <a href="/capat" className='underline'>Sign Up</a></p>
                 </div>
                 <div className="done ml-[40%] mt-[10%]"><button className='bg-[#d2eabd] p-3 px-8 text-[#3a6c1e] rounded-2xl text-lg'>Log In</button></div>
               </form>

@@ -4,6 +4,7 @@ import Typewriter from 'typewriter-effect';
 import landimg1 from '../Images/landimg1.png';
 import landimg2 from '../Images/landimg2.png';
 import { useNavigate } from "react-router-dom";
+import '../style.css';
 
 const Landing = () => {
 
