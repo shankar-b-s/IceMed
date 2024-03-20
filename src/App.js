@@ -4,6 +4,8 @@ import {Routes,Route} from 'react-router-dom';
 import Signindoctor from './Components/Signindoctor';
 import Landing from './Components/Landing';
 import Signinpatient from './Components/Signinpatient';
+import Createaccdoctor from './Components/Createaccdoctor';
+import Chatbot from './Components/Chatbot';
 function App() {
   return (
     <Routes>
@@ -11,6 +13,8 @@ function App() {
       <Route path='/signindoctor' element={<Signindoctor/>}/>
       <Route path='/' element={<Landing/>}/>
       <Route path='/signinpatient' element={<Signinpatient/>}/>
+      <Route path='/cadoc' element={<Createaccdoctor/>}/>
+      <Route path='/chatbot' element={<Chatbot/>}/>
     </Routes>
   );
 }

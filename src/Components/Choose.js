@@ -14,7 +14,7 @@ const Choose = () => {
         <Logopos/>
         <div className="division flex justify-center align-middle">
           <a href="/signindoctor">
-            <div className="doctor flex flex-col justify-center align-middle bg-white text-black p-48  rounded-l-xl cursor-pointer">
+            <div className="doctor flex flex-col justify-center align-middle bg-white bg-opacity-70 text-black p-48  rounded-l-xl cursor-pointer">
               <div className="docimg"><FaUserDoctor size={100}/></div>
               <div className="text-3xl items-center pt-3">Doctor</div>
             </div>
