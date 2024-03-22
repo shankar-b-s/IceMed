@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# MedEX: Innovative Healthcare Workflow System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MedEX is an innovative healthcare workflow system designed to enhance efficiency within medical institutions. By integrating AI-driven diagnosis and research assistance for doctors, as well as offering a personal healthcare companion for patients, MedEX aims to revolutionize the healthcare industry.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### AI-Driven Diagnosis
 
-### `npm start`
+![AI-Driven Diagnosis]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+MedEX provides cutting-edge AI-driven diagnosis tools to assist doctors in accurately diagnosing medical conditions. These tools leverage machine learning algorithms to analyze patient data and medical records, helping doctors make informed decisions quickly and efficiently.
+![WhatsApp Image 2024-03-22 at 17 21 23](https://github.com/shankar-b-s/IceMed/assets/110668489/39d75343-a0ac-4ff2-8630-549ae362977d)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Research Assistant
 
-### `npm test`
+![Research Assistant]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+MedEX serves as a research assistant for doctors, providing access to the latest medical research, clinical trials, and treatment guidelines. This feature enables doctors to stay up-to-date with advancements in their field and make evidence-based decisions for their patients.
 
-### `npm run build`
+### Personal Healthcare Companion
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Personal Healthcare Companion]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For patients, MedEX offers a personal healthcare companion that provides access to their medical records, treatment plans, and appointment schedules. This companion empowers patients to take control of their healthcare journey and facilitates communication with their healthcare providers.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Transparency
 
-### `npm run eject`
+MedEX prioritizes transparency by providing patients with greater visibility into their healthcare journey. Through the platform, patients can access detailed information about their diagnoses, treatment options, and medical history, fostering trust and collaboration between patients and healthcare providers.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## About
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+MedEX was developed by Ali Raashid, Ved Kulkarni, Shankar B S, Khushi Sikaria, and Jahnavi Majumder during the 24-hour hackathon named Code 4 Change.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for choosing MedEX! We hope it revolutionizes your healthcare experience.
