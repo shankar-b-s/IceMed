@@ -6,17 +6,19 @@ import Landing from './Components/Landing';
 import Signinpatient from './Components/Signinpatient';
 import Createaccdoctor from './Components/Createaccdoctor';
 import Chatbot from './Components/Chatbot';
-import ChatWithPDF from './Components/chatwithpdf';
+import Createaccpatient from './Components/Createaccpatient';
+import Choosedoctor from './Components/Choosedoctor';
 function App() {
   return (
     <Routes>
       <Route path='/choose'element={<Choose/>}/>
+      <Route path='/choosedoctor'element={<Choosedoctor/>}/>
       <Route path='/signindoctor' element={<Signindoctor/>}/>
       <Route path='/' element={<Landing/>}/>
       <Route path='/signinpatient' element={<Signinpatient/>}/>
       <Route path='/cadoc' element={<Createaccdoctor/>}/>
+      <Route path='/capat' element={<Createaccpatient/>}/>
       <Route path='/chatbot' element={<Chatbot/>}/>
-      <Route path='/chatwithpdf' element={<ChatWithPDF/>}/>
     </Routes>
   );
 }

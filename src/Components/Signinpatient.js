@@ -23,7 +23,7 @@ const Signinpatient = () => {
       if (response.ok) {
         setLoginStatus('success');
         // Redirect or perform any action upon successful login
-        window.location.href = '/';
+        window.location.href = 'http://localhost:8503';
       } else {
         setLoginStatus('failure');
       }

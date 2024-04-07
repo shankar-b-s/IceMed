@@ -1,13 +1,21 @@
-from langchain.prompts import PromptTemplate
+from langchain_community.chat_models import ChatOllama
 from langchain_community.llms import Ollama
-from langchain_text_splitters import RecursiveJsonSplitter
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+from langchain.chains.conversation.memory import ConversationBufferMemory
+from langchain.chains import ConversationChain
 
+memory = ConversationBufferMemory()
+
+# supports many more optional parameters. Hover on your `ChatOllama(...)`
+# class to view the latest available supported parameters
 llm = Ollama(model="biomistral")
 
-PromptTemplate = "You are a medical AI assistant for a doctor give answers to the following questions: {question}"
+conversation_buf = ConversationChain(
+    llm=llm,
+    memory=memory)
 
-def infer(query: str):
-    while True:
-        response = llm.invoke(query)
 
-        return response
+def infer(query):
+    response = conversation_buf.invoke(input=query)
+    return response['response']

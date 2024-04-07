@@ -1,0 +1,10 @@
+import streamlit as st
+import os
+from langchain_community.embeddings import SentenceTransformerEmbeddings
+from langchain_community.vectorstores import Qdrant
+from langchain_community.document_loaders import PyPDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.chains import RetrievalQA
+from langchain.prompts import PromptTemplate
+from qdrant_client import QdrantClient
+from langchain_community.llms import Ollama

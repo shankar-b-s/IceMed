@@ -4,7 +4,7 @@ from langchain.chains import RetrievalQA
 from doctor.embed import get_embeddings
 from doctor.vectordb import get_qdrant_client, create_qdrant_index_from_documents, retrieve_qdrant_index,create_qdrant_index
 
-doc_id = "457"
+doc_id = "Cancer"
 
 url = "http://localhost:6333"
 local_llm = "llama2"
